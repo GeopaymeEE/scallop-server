@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(
-    name="electrum-server",
+    name="scallop-server",
     version="0.9",
-    scripts=['run_electrum_server','electrum-server'],
+    scripts=['run_scallop_server','scallop-server'],
     install_requires=['plyvel','jsonrpclib', 'irc>=11'],
     package_dir={
         'scallopserver':'src'
@@ -22,12 +22,12 @@ setup(
         'scallopserver.stratum_tcp',
         'scallopserver.stratum_http'
     ],
-    description="Bitcoin Electrum Server",
+    description="CLAM Electrum Server",
     author="Thomas Voegtlin",
     author_email="thomasv1@gmx.de",
     license="GNU Affero GPLv3",
-    url="https://github.com/spesmilo/electrum-server/",
-    long_description="""Server for the Electrum Lightweight Bitcoin Wallet"""
+    url="https://github.com/kefkius/scallop-server/",
+    long_description="""Server for Lightweight CLAM Wallets"""
 )
 
 
