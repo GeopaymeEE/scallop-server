@@ -27,7 +27,7 @@ __b58base = len(__b58chars)
 
 global PUBKEY_ADDRESS
 global SCRIPT_ADDRESS
-PUBKEY_ADDRESS = 0
+PUBKEY_ADDRESS = 137
 SCRIPT_ADDRESS = 5
 
 def rev_hex(s):
@@ -127,7 +127,7 @@ def hash_160_to_script_address(h160):
     return hash_160_to_address(h160, SCRIPT_ADDRESS)
 
 
-def hash_160_to_address(h160, addrtype = 0):
+def hash_160_to_address(h160, addrtype = 137):
     """ Checks if the provided hash is actually 160bits or 20 bytes long and returns the address, else None
     """
     if h160 is None or len(h160) is not 20:
