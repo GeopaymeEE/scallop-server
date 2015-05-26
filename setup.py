@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="scallop-server",
-    version="0.9",
+    version="0.1",
     scripts=['run_scallop_server','scallop-server'],
     install_requires=['plyvel','jsonrpclib', 'irc>=11'],
     package_dir={
