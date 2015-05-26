@@ -6,21 +6,21 @@ setup(
     scripts=['run_electrum_server','electrum-server'],
     install_requires=['plyvel','jsonrpclib', 'irc>=11'],
     package_dir={
-        'electrumserver':'src'
+        'scallopserver':'src'
         },
     py_modules=[
-        'electrumserver.__init__',
-        'electrumserver.utils',
-        'electrumserver.storage',
-        'electrumserver.deserialize',
-        'electrumserver.networks',
-        'electrumserver.blockchain_processor',
-        'electrumserver.server_processor',
-        'electrumserver.processor',
-        'electrumserver.version',
-        'electrumserver.ircthread',
-        'electrumserver.stratum_tcp',
-        'electrumserver.stratum_http'
+        'scallopserver.__init__',
+        'scallopserver.utils',
+        'scallopserver.storage',
+        'scallopserver.deserialize',
+        'scallopserver.networks',
+        'scallopserver.blockchain_processor',
+        'scallopserver.server_processor',
+        'scallopserver.processor',
+        'scallopserver.version',
+        'scallopserver.ircthread',
+        'scallopserver.stratum_tcp',
+        'scallopserver.stratum_http'
     ],
     description="Bitcoin Electrum Server",
     author="Thomas Voegtlin",
