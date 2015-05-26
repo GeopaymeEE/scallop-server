@@ -6,10 +6,12 @@ import mmap
 import string
 import struct
 import types
+import binascii
 
 from utils import hash_160_to_pubkey_address, hash_160_to_script_address, public_key_to_pubkey_address, hash_encode,\
     hash_160
 
+TX_VERSION_CLAMSPEECH = 2
 
 class SerializationError(Exception):
     """Thrown when there's a problem deserializing or serializing."""
@@ -244,6 +246,7 @@ def parse_Transaction(vds, is_coinbase):
     d = {}
     start = vds.read_cursor
     d['version'] = vds.read_int32()
+    d['time'] = vds.read_int32()
     n_vin = vds.read_compact_size()
     d['inputs'] = []
     for i in xrange(n_vin):
@@ -262,6 +265,8 @@ def parse_Transaction(vds, is_coinbase):
             d['outputs'].append(o)
 
     d['lockTime'] = vds.read_uint32()
+    if d['version'] >= TX_VERSION_CLAMSPEECH:
+        d['clamSpeech'] = vds.read_bytes(vds.read_compact_size())
     return d
 
 
