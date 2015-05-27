@@ -3,7 +3,7 @@
 params = {
     'bitcoin_main': {
         'pubkey_address': 137,
-        'script_address': 5,
+        'script_address': 13,
         'genesis_hash': '00000c3ce6b3d823a35224a39798eca9ad889966aeb5a9da7b960ffb9869db35'
     },
     'bitcoin_test': {
